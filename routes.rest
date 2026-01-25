@@ -1,0 +1,78 @@
+// ### LOCALHOST
+GET http://localhost:8080/books
+
+###
+GET http://localhost:8080/books/64f1c2b3e4b0c1a2d3e4f5a6
+
+### Create Book
+POST http://localhost:8080/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "isbn": "978-0743273565",
+    "publisher": "Scribner",
+    "publishedDate": "1925-04-10",
+    "summary": "A story of wealth, love, and the American Dream in the 1920s.",
+    "pageCount": 180
+}
+
+### Update Book
+PUT http://localhost:8080/books/64f1c2b3e4b0c1a2d3e4f5a6 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "The Great Gatsby - Updated",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic Literature",
+    "isbn": "978-0743273565",
+    "publisher": "Scribner",
+    "publishedDate": "1925-04-10",
+    "summary": "Updated summary: A story of wealth, love, and the American Dream in the 1920s.",
+    "pageCount": 180
+}
+
+### Delete Book
+DELETE http://localhost:8080/books/64f1c2b3e4b0c1a2d3e4f5a6 HTTP/1.1
+
+###
+
+GET http://localhost:8080/authors
+
+###
+GET http://localhost:8080/authors/64f1c2b3e4b0c1a2d3e4f5a7
+
+### Create Author
+POST http://localhost:8080/authors HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "F. Scott",
+    "lastName": "Fitzgerald",
+    "birthDate": "1896-09-24",
+    "nationality": "American",
+    "bio": "Francis Scott Key Fitzgerald was an American novelist, essayist, and short story writer."
+}
+
+### Update Author
+PUT http://localhost:8080/authors/64f1c2b3e4b0c1a2d3e4f5a7 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Francis Scott",
+    "lastName": "Fitzgerald",
+    "birthDate": "1896-09-24",
+    "nationality": "American",
+    "bio": "Updated bio: Francis Scott Key Fitzgerald was an American novelist, essayist, and short story writer."
+}
+
+### Delete Author
+DELETE http://localhost:8080/authors/64f1c2b3e4b0c1a2d3e4f5a7 HTTP/1.1
+
+// ### PRODUCTION
+###
+GET https://cse341-project2-isaropesi.onrender.com/books
+###
+GET https://cse341-project2-isaropesi.onrender.com/authors
