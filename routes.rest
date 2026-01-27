@@ -9,14 +9,14 @@ POST http://localhost:8080/books HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "genre": "Classic",
-    "isbn": "978-0743273565",
-    "publisher": "Scribner",
-    "publishedDate": "1925-04-10",
-    "summary": "A story of wealth, love, and the American Dream in the 1920s.",
-    "pageCount": 180
+  "title": "The Summer I Turned Pretty",
+  "author": "Jenny Han",
+  "genre": "Young Adult Romance",
+  "isbn": "978-1416995586",
+  "publisher": "Simon & Schuster",
+  "publishedDate": "2009-04-21",
+  "summary": "A nostalgic coming-of-age story about a girl spending summers at the beach, experiencing friendship, family bonds, and her first romantic feelings.",
+  "pageCount": 276
 }
 
 ### Update Book
@@ -24,14 +24,14 @@ PUT http://localhost:8080/books/64f1c2b3e4b0c1a2d3e4f5a6 HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "The Great Gatsby - Updated",
-    "author": "F. Scott Fitzgerald",
-    "genre": "Classic Literature",
-    "isbn": "978-0743273565",
-    "publisher": "Scribner",
-    "publishedDate": "1925-04-10",
-    "summary": "Updated summary: A story of wealth, love, and the American Dream in the 1920s.",
-    "pageCount": 180
+  "title": "The Summer I Turned Pretty",
+  "author": "Jenny Han",
+  "genre": "Young Adult Romance",
+  "isbn": "978-1416995586",
+  "publisher": "Simon & Schuster",
+  "publishedDate": "2009-04-21",
+  "summary": "Updated summary: A nostalgic coming-of-age novel about a young girl who spends her summers at the beach, navigating family traditions, close friendships, and the emotions of first love as she grows and changes over time.",
+  "pageCount": 276
 }
 
 ### Delete Book
@@ -49,11 +49,11 @@ POST http://localhost:8080/authors HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "F. Scott",
-    "lastName": "Fitzgerald",
-    "birthDate": "1896-09-24",
+    "firstName": "Jenny",
+    "lastName": "Han",
+    "birthDate": "1980-09-03",
     "nationality": "American",
-    "bio": "Francis Scott Key Fitzgerald was an American novelist, essayist, and short story writer."
+    "bio": "Jenny Han is an American author best known for her young adult romance novels that focus on friendship, family, and first love."
 }
 
 ### Update Author
@@ -61,11 +61,11 @@ PUT http://localhost:8080/authors/64f1c2b3e4b0c1a2d3e4f5a7 HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "Francis Scott",
-    "lastName": "Fitzgerald",
-    "birthDate": "1896-09-24",
-    "nationality": "American",
-    "bio": "Updated bio: Francis Scott Key Fitzgerald was an American novelist, essayist, and short story writer."
+  "firstName": "Jenny",
+  "lastName": "Han",
+  "birthDate": "1980-09-03",
+  "nationality": "American",
+  "bio": "Updated bio: Jenny Han is an American author widely known for her young adult and middle-grade novels that explore friendship, family relationships, personal growth, and first love. Her stories often focus on coming-of-age experiences and emotional development in an age-appropriate way."
 }
 
 ### Delete Author
