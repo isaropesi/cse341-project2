@@ -1,16 +1,33 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-const swaggerAutogen = require('swagger-autogen')();
+const swaggerAutogen = require('swagger-autogen')({ openapi: '3.0.0' });
 
 const doc = {
     info: {
         title: 'Books API',
         description: 'API for managing books and authors'
     },
-    host: process.env.HOST,
-    schemes: ['http', 'https']
+    servers: [
+        {
+            url: 'http://localhost:8080',
+            description: 'Localhost'
+        },
+        {
+            url: 'https://cse341-project2-ohmp.onrender.com',
+            description: 'Production'
+        }
+    ],
+    components: {
+        securitySchemes: {
+            bearerAuth: {
+                type: 'http',
+                scheme: 'bearer'
+            }
+        }
+    }
 };
+
 
 
 const outputFile = './swagger-output.json';
