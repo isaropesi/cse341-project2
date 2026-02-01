@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
@@ -5,7 +8,7 @@ const doc = {
         title: 'Books API',
         description: 'API for managing books and authors'
     },
-    host: 'localhost:8080',
+    host: process.env.HOST,
     schemes: ['http', 'https']
 };
 
