@@ -5,9 +5,10 @@ const doc = {
         title: 'Books API',
         description: 'API for managing books and authors'
     },
-    host: 'cse341-project2-ohmp.onrender.com',
-    schemes: ['https']
+    host: 'localhost:8080',
+    schemes: ['http', 'https']
 };
+
 
 const outputFile = './swagger-output.json';
 const endpointsFiles = ['./src/routes/index.js'];

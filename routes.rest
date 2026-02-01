@@ -1,5 +1,12 @@
 // ### LOCALHOST
+GET http://localhost:8080/login
+
+###
+GET http://localhost:8080/logout
+
+###
 GET http://localhost:8080/books
+
 
 ###
 GET http://localhost:8080/books/64f1c2b3e4b0c1a2d3e4f5a6
